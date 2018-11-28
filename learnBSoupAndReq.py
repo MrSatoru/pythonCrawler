@@ -6,7 +6,8 @@ import re
 req = requests.get("http://www.boerse-frankfurt.de/index/DAX")
 doc = BeautifulSoup(req.text, "html.parser")
 
-def getCoursValeAndTime():
+
+def get_value_timestamp():
 
     value = None
     time_stamp = None
@@ -20,7 +21,7 @@ def getCoursValeAndTime():
     print("DAX Stand um " + time_stamp + " betrug " + value)
 
 
-getCoursValeAndTime()
+get_value_timestamp()
 
 
 
